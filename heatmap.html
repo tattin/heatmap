@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="heatmap.min.js"></script>
+<script>
+$(function() {
+    httpObj = new XMLHttpRequest();
+    httpObj.open("GET", "./formated/test.json", true);
+    httpObj.onreadystatechange = function(){
+        if (httpObj.readyState == 4) {
+            datas = eval(httpObj.responseText);
+            var points = [];
+            var max = 0;
+
+            for(i = 0; i < datas.length; i++){
+                for (j in datas[i]){
+                    var val = Math.floor(datas[i][j]);
+                    max = Math.max(max, val);
+                    var point = {
+                        x: i * 100,
+                        y: j * 10,
+                        value: val
+                    }
+                    points.push(point);
+                }
+            }
+            var data = {max: max, data: points};
+            heatmapInstance.setData(data);
+        }
+    }
+    httpObj.send(null);
+
+    var site_w = $("#site").width();
+    var site_h = $("#site").height();
+
+    function generateRandomData(len) {
+        // generate some random data
+        var points = [];
+        var max = 0;
+        var width = site_w;
+        var height = site_h;
+
+        while (len--) {
+            var val = Math.floor(Math.random()*100);
+            max = Math.max(max, val);
+            var point = {
+                x: Math.floor(Math.random()*width),
+                y: Math.floor(Math.random()*height),
+                value: val
+            };
+            points.push(point);
+        }
+
+        var data = { max: max, data: points };
+        return data;
+    }
+
+    var heatmapInstance = h337.create({
+        container: document.querySelector('.heatmap')
+    });
+
+    // generate 200 random datapoints
+    // var data = generateRandomData(200);
+    // heatmapInstance.setData(data);
+
+});
+</script>
+<style>
+.heatmap {
+    width: 100%;
+}
+#site {
+    width: 80%;
+}
+</style>
+</head>
+<body>
+<div class="heatmap">
+    <iframe id="site" height="600" scrolling="yes" src="http://www.century21.jp/"></iframe>
+    <!--
+    <img id="site" src="sites/father.jpg" />
+    -->
+</div>
+</body>
+</html>

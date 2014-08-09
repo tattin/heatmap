@@ -1,22 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-document.onclick = function(e){
-    sendHeatMapData(e);
-}
-window.onbeforeunload = function(){
-    sendHeatMapData();
-}
-sendHeatMapData = function(e){
-    request = new XMLHttpRequest();
-    request.open("GET", "./total.php?x=" + e.pageX + "&y=" + e.pageY + "&s=" + document.body.scrollTop);
-    request.send(null);
-}
-document.onscroll = function(){
-    console.log(document.body.scrollTop);
-}
-</script>
+<script src="//192.168.33.10/share/heatmap/heatpoint.js"></script>
 <style>
 body {
     margin: 0;
@@ -39,74 +24,74 @@ td {
 <body>
     <table cellpadding="0" cellspacing="0">
         <tr>
-            <td><a href="/?target=col1">col1</a></td>
-            <td><a href="/?target=col1">col2</a></td>
-            <td><a href="/?target=col1">col3</a></td>
-            <td><a href="/?target=col1">col4</a></td>
-            <td><a href="/?target=col1">col5</a></td>
+            <td><a href="?target=col1">col1</a></td>
+            <td><a href="?target=col2">col2</a></td>
+            <td><a href="?target=col3">col3</a></td>
+            <td><a href="?target=col4">col4</a></td>
+            <td><a href="?target=col5">col5</a></td>
         </tr>
         <tr>
-            <td><a href="/?target=col1">col1</a></td>
-            <td><a href="/?target=col1">col2</a></td>
-            <td><a href="/?target=col1">col3</a></td>
-            <td><a href="/?target=col1">col4</a></td>
-            <td><a href="/?target=col1">col5</a></td>
+            <td><a href="?target=col1">col1</a></td>
+            <td><a href="?target=col2">col2</a></td>
+            <td><a href="?target=col3">col3</a></td>
+            <td><a href="?target=col4">col4</a></td>
+            <td><a href="?target=col5">col5</a></td>
         </tr>
         <tr>
-            <td><a href="/?target=col1">col1</a></td>
-            <td><a href="/?target=col1">col2</a></td>
-            <td><a href="/?target=col1">col3</a></td>
-            <td><a href="/?target=col1">col4</a></td>
-            <td><a href="/?target=col1">col5</a></td>
+            <td><a href="?target=col1">col1</a></td>
+            <td><a href="?target=col2">col2</a></td>
+            <td><a href="?target=col3">col3</a></td>
+            <td><a href="?target=col4">col4</a></td>
+            <td><a href="?target=col5">col5</a></td>
         </tr>
         <tr>
-            <td><a href="/?target=col1">col1</a></td>
-            <td><a href="/?target=col1">col2</a></td>
-            <td><a href="/?target=col1">col3</a></td>
-            <td><a href="/?target=col1">col4</a></td>
-            <td><a href="/?target=col1">col5</a></td>
+            <td><a href="?target=col1">col1</a></td>
+            <td><a href="?target=col2">col2</a></td>
+            <td><a href="?target=col3">col3</a></td>
+            <td><a href="?target=col4">col4</a></td>
+            <td><a href="?target=col5">col5</a></td>
         </tr>
         <tr>
-            <td><a href="/?target=col1">col1</a></td>
-            <td><a href="/?target=col1">col2</a></td>
-            <td><a href="/?target=col1">col3</a></td>
-            <td><a href="/?target=col1">col4</a></td>
-            <td><a href="/?target=col1">col5</a></td>
+            <td><a href="?target=col1">col1</a></td>
+            <td><a href="?target=col2">col2</a></td>
+            <td><a href="?target=col3">col3</a></td>
+            <td><a href="?target=col4">col4</a></td>
+            <td><a href="?target=col5">col5</a></td>
         </tr>
         <tr>
-            <td><a href="/?target=col1">col1</a></td>
-            <td><a href="/?target=col1">col2</a></td>
-            <td><a href="/?target=col1">col3</a></td>
-            <td><a href="/?target=col1">col4</a></td>
-            <td><a href="/?target=col1">col5</a></td>
+            <td><a href="?target=col1">col1</a></td>
+            <td><a href="?target=col2">col2</a></td>
+            <td><a href="?target=col3">col3</a></td>
+            <td><a href="?target=col4">col4</a></td>
+            <td><a href="?target=col5">col5</a></td>
         </tr>
         <tr>
-            <td><a href="/?target=col1">col1</a></td>
-            <td><a href="/?target=col1">col2</a></td>
-            <td><a href="/?target=col1">col3</a></td>
-            <td><a href="/?target=col1">col4</a></td>
-            <td><a href="/?target=col1">col5</a></td>
+            <td><a href="?target=col1">col1</a></td>
+            <td><a href="?target=col2">col2</a></td>
+            <td><a href="?target=col3">col3</a></td>
+            <td><a href="?target=col4">col4</a></td>
+            <td><a href="?target=col5">col5</a></td>
         </tr>
         <tr>
-            <td><a href="/?target=col1">col1</a></td>
-            <td><a href="/?target=col1">col2</a></td>
-            <td><a href="/?target=col1">col3</a></td>
-            <td><a href="/?target=col1">col4</a></td>
-            <td><a href="/?target=col1">col5</a></td>
+            <td><a href="?target=col1">col1</a></td>
+            <td><a href="?target=col2">col2</a></td>
+            <td><a href="?target=col3">col3</a></td>
+            <td><a href="?target=col4">col4</a></td>
+            <td><a href="?target=col5">col5</a></td>
         </tr>
         <tr>
-            <td><a href="/?target=col1">col1</a></td>
-            <td><a href="/?target=col1">col2</a></td>
-            <td><a href="/?target=col1">col3</a></td>
-            <td><a href="/?target=col1">col4</a></td>
-            <td><a href="/?target=col1">col5</a></td>
+            <td><a href="?target=col1">col1</a></td>
+            <td><a href="?target=col2">col2</a></td>
+            <td><a href="?target=col3">col3</a></td>
+            <td><a href="?target=col4">col4</a></td>
+            <td><a href="?target=col5">col5</a></td>
         </tr>
         <tr>
-            <td><a href="/?target=col1">col1</a></td>
-            <td><a href="/?target=col1">col2</a></td>
-            <td><a href="/?target=col1">col3</a></td>
-            <td><a href="/?target=col1">col4</a></td>
-            <td><a href="/?target=col1">col5</a></td>
+            <td><a href="?target=col1">col1</a></td>
+            <td><a href="?target=col2">col2</a></td>
+            <td><a href="?target=col3">col3</a></td>
+            <td><a href="?target=col4">col4</a></td>
+            <td><a href="?target=col5">col5</a></td>
         </tr>
     </table>
 </body>
